@@ -2,8 +2,10 @@
   "name": "todolist-v1",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
+    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +16,10 @@
     "express": "^4.16.3",
     "lodash": "^4.17.21",
     "mongodb": "^5.5.0",
-    "mongoose": "^7.2.0"
+    "mongoose": "^7.2.0",
+    "netlify-cli": "^15.2.0",
+    "netlify-lambda": "^2.0.16",
+    "path": "^0.12.7",
+    "serverless-http": "^3.2.0"
   }
 }
